@@ -1,0 +1,45 @@
+---
+title: Orderium
+description: A Paper plugin
+template: splash # Remove or comment out this line to display the site sidebar on this page.
+hero:
+    tagline: Documentation for the plugin Orderium, covering its features and guides to using the plugin.
+    image:
+        file: ../../assets/orderium.png
+    actions: []
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import FancyLinkCard from '/src/components/FancyLinkCard.astro';
+
+## Getting Started
+
+<CardGrid>
+    <FancyLinkCard title="How does it work?" icon="information" href="/onboarding">
+        Find out the system design of the plugin.
+    </FancyLinkCard>
+    <FancyLinkCard title="Installing" icon="download" href="/getting-started/installing">
+        A guide to get Orderium running on your server.
+    </FancyLinkCard>
+    <FancyLinkCard
+        title="Using Orderium"
+        icon="approve-check-circle"
+        href="/getting-started/creating-an-order"
+    >
+        Start with creating your first order.
+    </FancyLinkCard>
+    <FancyLinkCard title="Configuring" icon="setting" href="#">
+        Tweak settings to make Orderium fits with your server.
+    </FancyLinkCard>
+</CardGrid>
+
+## For Developers
+
+<CardGrid>
+    <FancyLinkCard title="Orderium API" icon="puzzle">
+        Orderium provides an API that you can interact with.
+    </FancyLinkCard>
+    <FancyLinkCard title="Contributing" icon="star">
+        Support Orderium and be a part of the contributors!
+    </FancyLinkCard>
+</CardGrid>
