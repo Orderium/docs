@@ -23,3 +23,31 @@ For Orderium,
 - "size" is also known as "rows", which is a number between 1 and 6 (inclusive) determining the amount of rows in the container. Conversion: `size = rows * 9`.
 - A "slot" is also known as "button", which is an item like a normal slot, but it can perform certain actions upon clicking or have data dependent on the context of the GUI.
 
+<details>
+  <summary>In-game Example</summary>
+
+  ![A container GUI example](./assets/container-gui-example.png)
+</details>
+
+## Dialog
+
+Dialog is added to Minecraft in 1.21.6. It provides many components to let servers build intuitive GUIs.
+
+Due to the complexity of dialogs, this page cannot cover all of its feature. In case you want to, check out [this page](https://minecraft.wiki/w/Dialog) from the minecraft.wiki community.
+
+Orderium currently only uses:
+- Dialog format: `confirmation` and `multi_action`
+- Body format: `plain_message` and `item`
+- Input control format: `text` and `single_option`
+- Action format: `dynamic/custom`
+
+<details>
+  <summary>In-game Example</summary>
+  ![A dialog GUI example](./assets/dialog-gui-example.png)
+</details>
+
+## Sign
+
+:::caution
+Sign GUI is deprecated in favor of dialog GUI and will be removed in future releases of the plugin.
+:::
