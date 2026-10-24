@@ -5,17 +5,17 @@ template: splash # Remove or comment out this line to display the site sidebar o
 hero:
     tagline: Documentation for the plugin Orderium, covering its features and guides to using the plugin.
     image:
-        file: ../../assets/orderium.png
+        file: assets/orderium.svg
     actions: []
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
 import FancyLinkCard from '/src/components/FancyLinkCard.astro';
 
 ## Getting Started
 
 <CardGrid>
-    <FancyLinkCard title="How does it work?" icon="information" href="/onboarding">
+    <FancyLinkCard title="How does it work?" icon="information" href="/getting-started/how-it-works">
         Find out the system design of the plugin.
     </FancyLinkCard>
     <FancyLinkCard title="Installing" icon="download" href="/getting-started/installing">
@@ -24,7 +24,7 @@ import FancyLinkCard from '/src/components/FancyLinkCard.astro';
     <FancyLinkCard
         title="Using Orderium"
         icon="approve-check-circle"
-        href="/getting-started/creating-an-order"
+        href="/getting-started/using-orderium"
     >
         Start with creating your first order.
     </FancyLinkCard>

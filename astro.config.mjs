@@ -14,8 +14,9 @@ export default defineConfig({
                 {
                     label: 'Getting Started',
                     items: [
+                        { label: "How it works", link: '/getting-started/how-it-works' },
                         { label: 'Installing', link: '/getting-started/installing' },
-                        { label: 'Creating An Order', link: '/getting-started/creating-an-order' },
+                        { label: 'Using Orderium', link: '/getting-started/using-orderium' },
                     ],
                 },
                 {
