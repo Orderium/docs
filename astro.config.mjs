@@ -12,16 +12,16 @@ export default defineConfig({
             ],
             sidebar: [
                 {
-                    label: 'Getting Started',
+                    label: 'For Administrators',
                     items: [
-                        { label: "How it works", link: '/getting-started/how-it-works' },
-                        { label: 'Installing', link: '/getting-started/installing' },
-                        { label: 'Using Orderium', link: '/getting-started/using-orderium' },
+                        { label: "How it works", link: '/admin/how-it-works' },
+                        { label: 'Installing', link: '/admin/installing' },
+                        { label: 'Using Orderium', link: '/admin/using-orderium' },
                     ],
                 },
                 {
-                    label: 'GUI System',
-                    items: [{ label: 'Introduction', link: '/gui-system/introduction' }],
+                    label: 'For Developers',
+                    items: [{ label: 'GUI System', link: '/dev/gui-system' },],
                 },
             ],
             customCss: ['/src/styles/theme.css'],
