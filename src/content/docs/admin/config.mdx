@@ -1,0 +1,12 @@
+---
+title: Configuration
+---
+
+import ConfigNode from "/src/components/ConfigNode.astro";
+import MainConfig from "/src/config/config.yml?raw";
+import { parse } from "yaml";
+
+<details>
+  <summary>Main Configuration (`config.yml`)</summary>
+  <ConfigNode data={parse(MainConfig)} />
+</details>

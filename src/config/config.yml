@@ -1,0 +1,114 @@
+check-for-updates:
+  default: "true"
+  description: >-
+    Whether to check for updates automatically using Modrinth's API.
+log-transactions:
+  default: "true"
+  description: >-
+    Whether to log any money changes related to Orderium made by players. Currently, manually querying the database is the only way to see these logs.
+expires-after:
+  default: "604800000"
+  description: >-
+    The time in milliseconds after which an order will expire if not completed.
+minimum-price:
+  default: "0.1"
+  description: >-
+    The minimum amount of money the player can set as the price per item when creating an order.
+max-collect:
+  default: "1000"
+  description: >-
+    The maximum number the player can input when collecting items from an order. Setting this value too high might let players lag your server with large orders.
+max-collect-per-minute:
+  default: "1000"
+  description: >-
+    The maximum amount of items a player can collect every minute. Setting this value too high might let players lag your server with large orders.
+similarity-check:
+  default: "..."
+  description: >-
+    a [list of data components](https://minecraft.wiki/w/Data_component_format#List_of_components) determines how two items should be similar.
+    If two items have these exact same components and their values are the same respectively on both items, these items are considered similar.
+    A similarity check is performed when a player delivers items to an order.
+    The plugin checks each slot in the deliver GUI to see if that item is similar to the one in the order,
+    if an item has `minecraft:container` component and `shulker-delivering` is enabled, that container will be checked recursively.
+shulker-delivering:
+  default: "true"
+  description: >-
+    Whether to check shulker boxes recursively for items inside when delivering items to an order.
+broadcast-order-creation:
+  default: "true"
+  description: >-
+    Whether to broadcast a message to all players when a player creates a new order.
+order-command-aliases:
+  default: '[order, orders]'
+  description: >-
+    A list of aliases for the order command to open the main GUI. Only take effects on server restart or reload.
+sorts-display:
+  active:
+    most-money-per-item:
+      default: "<aqua>Most Money Per Item"
+      description: >-
+        Text component to display when this sort type is selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    recently-listed:
+      default: "<aqua>Recently Listed"
+      description: >-
+        Text component to display when this sort type is selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    most-delivered:
+      default: "<aqua>Most Delivered"
+      description: >-
+        Text component to display when this sort type is selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    most-paid:
+      default: "<aqua>Most Paid"
+      description: >-
+        Text component to display when this sort type is selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    a-z:
+      default: "<aqua>A - Z"
+      description: >-
+        Text component to display when this sort type is selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    z-a:
+      default: "<aqua>Z - A"
+      description: >-
+        Text component to display when this sort type is selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+  inactive:
+    most-money-per-item:
+      default: "Most Money Per Item"
+      description: >-
+        Text component to display when this sort type is not selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    recently-listed:
+      default: "Recently Listed"
+      description: >-
+        Text component to display when this sort type is not selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    most-delivered:
+      default: "Most Delivered"
+      description: >-
+        Text component to display when this sort type is not selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    most-paid:
+      default: "Most Paid"
+      description: >-
+        Text component to display when this sort type is not selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    a-z:
+      default: "A - Z"
+      description: >-
+        Text component to display when this sort type is not selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+    z-a:
+      default: "Z - A"
+      description: >-
+        Text component to display when this sort type is not selected. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+order-status:
+  expired:
+    default: "<red>Order Expired"
+    description: Determines the text to display when an order is expired. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+  completed:
+    default: "<green>Order Completed"
+    description: Determines the text to display when an order is completed. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+  available:
+    default: "<gray>Expires after <day>d <hour>h <minute>m <second>s"
+    description: Determines the text to display when an order is active. Formatted using [MiniMessage](https://docs.papermc.io/adventure/minimessage/).
+orders-limit:
+  default: >-
+
+      - limit: 27
+        permission: default
+  description: >-
+    A list of objects, where each object has 2 key-value pairs. Determines how many orders a player can create before getting rejected.
+    If a player has multiple permissions, their limit is the maximum value.
+    The default object should not be removed.

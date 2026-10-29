@@ -68,6 +68,21 @@ gui.setOnClose(closeEvent -> {
 gui.open(player);
 ```
 
+#### Paginated GUI
+
+The framework also contains a "paginated GUI" feature. The basic point of paginated GUI is to show a list of objects.
+
+For example, in the main GUI, you can see a list of all active orders. This is a paginated GUI.
+
+Each object in the list reserves a slot in the GUI.
+If the list is longer than the number of slots available, paginated GUI creates a new page as the next page to display those objects.
+
+Each object is required to have an "icon", which is an `ItemStack` so that the object can be displayed in the chest container.
+The framework lets you perform certain actions when clicking on an object in a paginated GUI, similarly to standard GUIs.
+
+A few differences between standard GUI and paginated GUI:
+- Paginated GUI has a list of objects and display them accordingly to what slots you allow, as well as actions for clicking icons of the objects.
+- Each paginated GUI can only be shown to one player, whereas you can show one standard GUI to multiple players.
 ## Dialog
 
 Dialog is added to Minecraft in 1.21.6. It provides many components to let servers build intuitive GUIs.
