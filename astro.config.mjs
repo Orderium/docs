@@ -2,8 +2,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+const prod = process.env.NODE_ENV === 'production';
+
 // https://astro.build/config
 export default defineConfig({
+    site: prod ? "https://imkarven.github.io/orderium" : undefined,
     integrations: [
         // save Markdown renderer configuration to globals for use by the on-demand renderer
         // order matters - we want this to use only our configuration
@@ -19,6 +22,7 @@ export default defineConfig({
             title: 'Orderium',
             social: [
                 { icon: 'github', label: 'GitHub', href: 'https://github.com/ImKarven/Orderium' },
+                { icon: 'discord', label: 'Discord', href: 'https://devdiscord.karven.qzz.io/' }
             ],
             sidebar: [
                 {
@@ -27,7 +31,8 @@ export default defineConfig({
                         { label: 'How it works', link: '/admin/how-it-works' },
                         { label: 'Installing', link: '/admin/installing' },
                         { label: 'Using Orderium', link: '/admin/using-orderium' },
-                        { label: 'Configuring', link: '/admin/config' },
+                        { label: 'Modifying Items', link: '/admin/modifying-items' },
+                        { label: 'Configuration', link: '/admin/config' },
                     ],
                 },
                 {

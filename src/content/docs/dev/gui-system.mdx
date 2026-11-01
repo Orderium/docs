@@ -66,6 +66,7 @@ gui.setOnClose(closeEvent -> {
 });
 
 gui.open(player);
+// You can also open the GUI to more players as you wish
 ```
 
 #### Paginated GUI
@@ -83,6 +84,8 @@ The framework lets you perform certain actions when clicking on an object in a p
 A few differences between standard GUI and paginated GUI:
 - Paginated GUI has a list of objects and display them accordingly to what slots you allow, as well as actions for clicking icons of the objects.
 - Each paginated GUI can only be shown to one player, whereas you can show one standard GUI to multiple players.
+- Implementation of a standard GUI is simply an object, whereas for paginated GUI, you would have to create a class to extend the paginated GUI abstract class.
+
 ## Dialog
 
 Dialog is added to Minecraft in 1.21.6. It provides many components to let servers build intuitive GUIs.

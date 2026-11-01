@@ -6,7 +6,52 @@ import ConfigNode from "/src/components/ConfigNode.astro";
 import MainConfig from "/src/config/config.yml?raw";
 import { parse } from "yaml";
 
+This page explains the options in each config file so that you can understand and tweak those values to your likings.
+
+## General Configuration
+
+Documentation for a few individual configuration files.
+
 <details>
   <summary>Main Configuration (`config.yml`)</summary>
   <ConfigNode data={parse(MainConfig)} />
 </details>
+
+## GUI Configuration
+
+## Utility
+
+### Order placeholders
+
+Order placeholders are placeholders provided by an order. Order placeholders include:
+- `money-per`: Price per item of the order
+- `paid`: The total money other players have earned from this order
+- `total`: The amount of money the order owner spent to create this order
+- `delivered`: The number of items other players delivered to this order
+- `amount`: The number of items the owner requested to order
+- `in-storage`: The number of items the owner can collect from this order
+- `player`: The name of the order owner
+- `order-status`: The status of the order
+- `item`: The display name of this order
+
+[//]: # (#### Item Order placeholder)
+
+[//]: # ()
+[//]: # (Throughout the whole documentation, "order" is the termed used to mention an object that players can buy/sell items.)
+
+[//]: # (However, the actual term for this is "item order" - an "order" that a player can request *items* from other players.)
+
+[//]: # ()
+[//]: # ("order", in real term, just means that it is a thing that stores an object that a player chooses.)
+
+[//]: # (This player needs to mention how many of that object they want and the price they are willing to pay for each of those objects.)
+
+[//]: # ()
+[//]: # (The documentation defaults "order" as "item order" because it is currently the only type of order in Orderium.)
+
+[//]: # (Forks or add-ons may add new types of orders.)
+
+[//]: # ()
+[//]: # (An item order has an additional placeholder:)
+
+[//]: # (- `item`: The item name of this order. Hovering over it displays the item's tooltip.)

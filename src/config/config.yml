@@ -112,3 +112,59 @@ orders-limit:
     A list of objects, where each object has 2 key-value pairs. Determines how many orders a player can create before getting rejected.
     If a player has multiple permissions, their limit is the maximum value.
     The default object should not be removed.
+messages:
+  create-order-success:
+    default: "<gray>Your order has been created"
+    description: Sent when the player creates an order successfully.
+  invalid-input:
+    default: "<red>Invalid number or format"
+    description: Sent when the player inputs an invalid number in a dialog.
+  deliver:
+    default: "<gray>You earned <green>$<money><gray> from delivering an order"
+    description: >-
+      Sent after the player delivers items to an order.
+      <br />
+      Available placeholders:
+
+      - `money`: The amount of money earned from the delivery.
+  receive-delivery:
+    default: "<aqua><deliverer> <gray>delivered you <aqua><deliver-amount> <item>"
+    description: >-
+      Sent to the order owner when the player delivers items to an order.
+      <br />
+      Available placeholders:
+
+      - [Order placeholders](/admin/config#order-placeholders);
+
+      - `deliverer`: The name of the player who delivered items;
+
+      - `deliver-amount`: The amount of items the player delivered.
+  not-enough-money:
+    default: "<red>You do not have enough money"
+    description: Sent when the player does not have enough money when creating an order.
+  deliver-self:
+    default: "<red>You cannot deliver your own order"
+    description: Sent when the player tries to deliver items to their own order.
+  exceeded-max-collect:
+    default: "<red>You are collecting too many items"
+    description: Sent when the player inputs a number that exceeds the `max-collect` config value when collecting items from an order.
+  collecting-too-fast:
+    default: "<red>You are collecting items too fast. Wait a minute..."
+    description: Sent when the player tries to collect items from an order but they have exceeded the `max-collect-per-minute` config value within the current minute.
+  order-creation-broadcast:
+    default: "<green><player> <white>has just created a new order for <green><item> <white>in <gray>/orders"
+    description: >-
+      Broadcast a message to all online players when a player creates a new order.
+      <br />
+      Available placeholders:
+
+      - [Order placeholders](/admin/config#order-placeholders).
+sounds:
+  default: "..."
+  description: Sound to play when certain action is performed.
+config-version:
+  default: "8"
+  description: >-
+    **DO NOT TOUCH THIS!**
+    <br />
+    Config version is used by Orderium to perform migrations, so that the format of the config can be updated when new config options are added or modified.

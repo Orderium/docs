@@ -1,0 +1,73 @@
+---
+title: Modifying Items
+---
+
+By default, you get a list of items to choose for your order. This page guides you on how to modify items in this list, as well as some notes to take care of when doing so.
+
+:::note
+The guides below require you to perform actions in-game. There is no editing files or CLI way of doing it.
+:::
+
+## Blacklist
+
+You can blacklist certain items from the default list of orderable items. This essentially removes them from being orderable, and you can revert that easily.
+
+Adding/Removing items from blacklist requires `orderium.admin.blacklist` permission.
+
+Adding/Removing need to execute `/orderium reload` or a server restart to take effect.
+
+### Adding
+
+To add an item to the blacklist, simply open the main GUI (`/order`) -> Your Orders -> Choose Your Item; in this GUI, right-click whatever items you want to blacklist.
+
+### Removing
+
+You can remove items that you've blacklisted by executing `/orderium blacklist`, which lists all the blacklisted items. You can then click to ones that you want to remove from the list.
+
+### Items you should blacklist
+
+If you want to blacklist all items that are not obtainable in survival, check [this](https://minecraft.wiki/w/Creative_inventory#Creative_inventory_exclusives).
+
+
+## Custom Items
+
+Orderium allows you to make your own custom items to be orderable.
+These items can simply be items with some enchantments and custom names, to items from custom-content plugins with custom textures such as Nexo, ItemsAdder or CraftEngine.
+
+Adding/Editing/Removing custom items requires `orderium.admin.custom-items` permission.
+
+Custom items do not always work. It depends on the similarity-check configuration and how the plugin handles the item.
+
+Adding/Editing/Removing need to execute `/orderium reload` or a server restart to take effect
+
+### Adding
+To add a custom item, execute `/orderium custom_items`. While in this GUI, click an item in your inventory or hotbar to add it to the list.
+
+### Editing
+Orderium doesn't magically recognize your custom item name. You have to add it as it is needed for the search feature to work on custom items.
+
+Execute `/orderium custom_items`, left-click the item you want to edit.
+
+You can then add "a name" to the item to make it searchable. e.g. Adding `Cool Sword` to your item means the item will appear when searching `Cool Sword` or its [substrings](https://en.wikipedia.org/wiki/Substring) (examples of substring can be `Cool`, `Sword`, `ool Sw`) and it is not case-sensitive.
+
+You can also remove names you've added. By click the "Add Search" button of the dialog, it will toggle to "Remove Search". Put an index to the text field to remove the name. e.g. Putting `1` will remove the first name on the list.
+
+Your input can contain multiple names/indices by separating them with commas (",").
+<br />e.g. `Cool Sword,Another Name,Hello there`, `1,3,4,5`
+
+You may see texts you add are converted to lowercase and spaces are replaced with underscores ("_"). This is intended, you can search normally just fine.
+
+### Removing
+In the same GUI, shift-right-click an item on the above inventory to remove it from the list.
+
+## Updating
+
+:::caution Important
+When updating to a newer Minecraft version, **items in your blacklist and custom items list remain formatted as the old Minecraft version format.**
+The items do not get updated to the new Minecraft version's format automatically.
+
+Paper automatically upgrades these old items so that they work on newer version.
+However, in some cases, this may lead to the blacklist not working or custom items having weird bugs.
+
+Currently, the best way to solve this is to remove all custom items and items in the blacklist and re-add them after you've updated to the newer Minecraft version.
+:::
