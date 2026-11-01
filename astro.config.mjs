@@ -29,16 +29,16 @@ export default defineConfig({
                 {
                     label: 'For Administrators',
                     items: [
-                        { label: 'How it works', link: '/admin/how-it-works' },
-                        { label: 'Installing', link: '/admin/installing' },
-                        { label: 'Using Orderium', link: '/admin/using-orderium' },
-                        { label: 'Modifying Items', link: '/admin/modifying-items' },
-                        { label: 'Configuration', link: '/admin/config' },
+                        { label: 'How it works', link: 'admin/how-it-works' },
+                        { label: 'Installing', link: 'admin/installing' },
+                        { label: 'Using Orderium', link: 'admin/using-orderium' },
+                        { label: 'Modifying Items', link: 'admin/modifying-items' },
+                        { label: 'Configuration', link: 'admin/config' },
                     ],
                 },
                 {
                     label: 'For Developers',
-                    items: [{ label: 'GUI System', link: '/dev/gui-system' }],
+                    items: [{ label: 'GUI System', link: 'dev/gui-system' }],
                 },
             ],
             customCss: ['/src/styles/theme.css'],
