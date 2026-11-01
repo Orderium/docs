@@ -6,7 +6,8 @@ const prod = process.env.NODE_ENV === 'production';
 
 // https://astro.build/config
 export default defineConfig({
-    site: prod ? "https://imkarven.github.io/orderium" : undefined,
+    site: prod ? "https://imkarven.github.io" : undefined,
+    base: prod ? "/Orderium" : undefined,
     integrations: [
         // save Markdown renderer configuration to globals for use by the on-demand renderer
         // order matters - we want this to use only our configuration
