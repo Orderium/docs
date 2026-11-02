@@ -1,9 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { stringifiedDiscordEmbed } from './src/utils/discord.ts';
 
 const prod = process.env.NODE_ENV === 'production';
+const SITE = "https://orderium.github.io";
+const EMBED_LINK = SITE + "/embeds.json";
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,9 +24,8 @@ export default defineConfig({
             title: 'Orderium',
             head: [
                 {
-                    tag: "script",
-                    attrs: { id: "discord:component-embed", type: "application/json" },
-                    content: `{ "component": ${stringifiedDiscordEmbed} }`
+                    tag: "link",
+                    attrs: { rel: "discord:component-embed", type: "application/json", href: EMBED_LINK }
                 }
             ],
             social: [
