@@ -8,9 +8,8 @@ export const discordEmbed = {
             accessory: {
                 type: 11,
                 media: {
-                    url: 'https://raw.githubusercontent.com/Orderium/assets/refs/heads/main/icon/512.png',
-                    proxy_url:
-                        'https://raw.githubusercontent.com/Orderium/assets/refs/heads/main/icon/512.png',
+                    url: 'https://github.com/orderium.png',
+                    proxy_url: 'https://github.com/orderium.png',
                 },
                 description: null,
                 spoiler: false,
