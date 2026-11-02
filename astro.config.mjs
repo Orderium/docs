@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { stringifiedDiscordEmbed } from './src/utils/discord.ts';
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -20,6 +21,13 @@ export default defineConfig({
         },
         starlight({
             title: 'Orderium',
+            head: [
+                {
+                    tag: "script",
+                    attrs: { id: "discord:component-embed", type: "application/json" },
+                    content: stringifiedDiscordEmbed
+                }
+            ],
             social: [
                 { icon: 'github', label: 'GitHub', href: 'https://github.com/ImKarven/Orderium' },
                 { icon: 'discord', label: 'Discord', href: 'https://devdiscord.karven.qzz.io/' }
