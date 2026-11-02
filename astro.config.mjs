@@ -25,7 +25,7 @@ export default defineConfig({
                 {
                     tag: "script",
                     attrs: { id: "discord:component-embed", type: "application/json" },
-                    content: stringifiedDiscordEmbed
+                    content: `{ "component": ${stringifiedDiscordEmbed} }`
                 }
             ],
             social: [
