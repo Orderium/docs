@@ -4,6 +4,8 @@ title: Configuration
 
 import ConfigNode from "/src/components/ConfigNode.astro";
 import MainConfig from "/src/config/config.yml?raw";
+import WebhookConfig from "/src/config/webhook.yml?raw";
+import WebhookOptionConfig from "/src/config/webhook-option.yml?raw";
 import { parse } from "yaml";
 
 This page explains the options in each config file so that you can understand and tweak those values to your likings.
@@ -17,9 +19,10 @@ Documentation for a few individual configuration files.
   <ConfigNode data={parse(MainConfig)} />
 </details>
 
-## GUI Configuration
-
-## Utility
+<details>
+  <summary>Webhook Configuration (`webhook.yml`)</summary>
+  <ConfigNode data={parse(WebhookConfig)} />
+</details>
 
 ### Order placeholders
 
@@ -55,3 +58,11 @@ Order placeholders are placeholders provided by an order. Order placeholders inc
 [//]: # (An item order has an additional placeholder:)
 
 [//]: # (- `item`: The item name of this order. Hovering over it displays the item's tooltip.)
+
+### Webhook Option
+
+Webhook Option is a section for configuring settings of a webhook sending behavior.
+
+<ConfigNode data={parse(WebhookOptionConfig)} />
+
+## GUI Configuration

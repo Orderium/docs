@@ -1,0 +1,21 @@
+<option-name>:
+  enabled:
+    default: "false"
+    description: "Whether to send webhooks of this option."
+  embed:
+    title:
+      default: "..."
+      description: "The title of the embed."
+    'description_':
+      default: "..."
+      description: "The description of the embed, can have multiple lines."
+    color:
+      default: "FFFFFF"
+      description: "The color on the left side of the embed in hex code, without the '#' prefix."
+    footer:
+      icon-url:
+        default: "https://wsrv.nl/?url=https://raw.githubusercontent.com/ImKarven/Orderium/refs/heads/master/assets/OrderiumIcon.png"
+        description: "The url to the icon at the footer of the embed."
+      text:
+        default: "Orderium"
+        description: "Text to display next to the icon at the footer."

@@ -1,0 +1,52 @@
+create-order:
+  default: "..."
+  description: >-
+    A [Webhook Option](/admin/config#webhook-option), sends webhook when a player creates a new order.
+
+    Available placeholders:
+
+    - [Order placeholders](/admin/config#order-placeholders).
+
+collect-items:
+  default: "..."
+  description: >-
+    A [Webhook Option](/admin/config#webhook-option), sends webhook when a player collects items from an order.
+
+    Available placeholders:
+
+    - [Order placeholders](/admin/config#order-placeholders);
+
+    - `collect-amount`: The amount of items the player collected.
+
+cancel-order:
+  default: "..."
+  description: >-
+    A [Webhook Option](/admin/config#webhook-option), sends webhook when a player cancels an order.
+
+    Available placeholders:
+
+    - [Order placeholders](/admin/config#order-placeholders);
+
+    - `earn`: The amount of money the player earned as a refund after the cancellation.
+
+deliver-order:
+  default: "..."
+  description: >-
+    A [Webhook Option](/admin/config#webhook-option), sends webhook when a player delivers items to an order.
+
+    Available placeholders:
+
+    - [Order placeholders](/admin/config#order-placeholders);
+
+    - `deliverer`: The name of the player who delivered items to this order;
+
+    - `deliver-amount`: The amount of items the player delivered.
+
+order-complete:
+  default: "..."
+  description: >-
+    A [Webhook Option](/admin/config#webhook-option), sends webhook when an order is completed.
+
+    Available placeholders:
+
+    - [Order placeholders](/admin/config#order-placeholders).
